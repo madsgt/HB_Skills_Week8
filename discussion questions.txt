@@ -16,27 +16,101 @@ O(n)
 O(2n)
 O(1)
 
+RESPONSE :
+Best efficiency to lowest efficiency: 
+O(1)
+O(log n),
+O(n)
+O(2n)
+O(n log n)
+O(n2)
+
+
 
 Stacks and Queues
 
 In the following cases, would a stack or queue be a more appropriate data structure?
+
 The process of loading and unloading pallets onto a flatbed truck
+RESPONSE: stack
+
 Putting bottle caps on bottles of beer as they roll down an assembly line
+RESPONSE: queue
+
 Calculating the solution to this mathematical expression: 2 + (7 * 4) - (3 / 2)
+RESPONSE: stack
+
 Describe two more situations where a queue would be an appropriate data structure.
+RESPONSE: 
+1)film ticketing line
+2)printing tasks
+
 Describe two more situations where a stack would be an appropriate data structure.
+RESPONSE:
+1) depth first search in binary trees
+2) undo/redo operation
+
 Linked Lists
 
-Given the linked list below, which are the nodes? What is the data for each node? Where is the head? Where is the tail? (Please be as specific as possible — exactly which parts of the diagram correspond to each part? Arrows? Boxes? Text?)
+Given the linked list below, which are the nodes? What is the data for each node? Where is the head? Where is the tail?
+(Please be as specific as possible — exactly which parts of the diagram correspond to each part? Arrows? Boxes? Text?)
+RESPONSE-
+APPLE and next is Node 1
+Berry and next is Node 2
+Cherry and next is Node 3
+
+Data for Node 1- Apple, Node2 - Berry, Node 3- Cherry
+
+Head is at Node 1 (data-Apple, next)
+Tail is at Node 3 (data-Cherry, next)
+
 
 What’s the difference between doubly- and singly-linked lists?
+RESPONSE: In singly linked list Each item has a reference to the next item.We follow the reference to the next one
+Double linked lists store a reference to the previous element. This means you can traverse the list backwards as well as forwards
+
 Why is it faster to append to a linked list if we keep track of the tail as an attribute?
+RESPONSE: WE do not need to traverse the length of the list , we just need to check where is the tail and reference it to the data we want to append
+
+
 Trees
 
 
 Given the tree above, in what order would a Breadth First Search (BFS) algorithm visit each node until finding burrito (starting at food)? Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+RESPONSE : 
+we use FIFO treat it as queue, enqueue(.extend) last and dequeue(pop) first
+First start with [food]
+Not food so pop food and add the children -[Italian, Indian, Mexican]
+Not Italian so pop Italian and add its children to end- [Indian, Mexican, lasagna, pizza]
+Not Indian so pop Indian and add its children to end- [ Mexican, lasagna, pizza, tikka masala, saag]
+Not Mexican so pop Mexican and add its children to end- [ lasagna, pizza, tikka masala, saag, burrito, tacos, enchiladas]
+Not lasagna so pop lasagna and no children to end- [ pizza, tikka masala, saag, burrito, tacos, enchiladas]
+Not pizza so pop pizza and add children to end- [ tikka masala, saag, burrito, tacos, enchiladas, thin-crust, Chicago-style, New York-style, Sicilian]
+Not tikka masala so pop tikka masala and no children to end- [saag, burrito, tacos, enchiladas, thin-crust, Chicago-style, New York-style, Sicilian]
+Not saag so pop saag and no children to end- [burrito, tacos, enchiladas, thin-crust, Chicago-style, New York-style, Sicilian]
+Found burrito
+
+
+
 Given the tree above, in what order would a Depth First Search (DFS) algorithm visit each node until finding Chicago-style (starting at food)? Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+RESPONSE : 
+we use LIFO treat it as stack, push and pop the last item
+First start with [food]
+Not food so pop food and add the children -[Italian, Indian, Mexican]
+Not Mexican so pop Mexican and add its children to end- [Italian, Indian, burrito, tacos, enchiladas ]
+Not enchiladas so pop enchiladas and no children to end- [Italian, Indian, burrito, tacos ]
+Not tacos so pop tacos and no children to end- [Italian, Indian, burrito ]
+found burrito
+
 How is a binary search tree different from other trees?
+RESPONSE:
+We need to search a binary tree using a “rule” that we define by design. also BSTs are dynamic data structures-Each node can have up to two child nodes.
+he left subtree of a node contains only nodes with keys less than the node's key.
+The right subtree of a node contains only nodes with keys greater than the node's key.
+The left and right subtree each must also be a binary search tree.
+A unique path exists from the root to every other node.
+
+
 
 
 """
